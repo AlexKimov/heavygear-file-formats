@@ -1,1 +1,1 @@
-F:\git\qbms\quickbms.exe -Y -F "*.prj" prj.bms C:\Games\Activision\HeavyGear unpacked
+F:\git\qbms\quickbms.exe -d -Y -F "*.prj" prj.bms "C:\Games\Activision\Heavy Gear 2" unpacked
