@@ -1,0 +1,30 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+typedef struct {
+  char Name[12];
+  UINT16 Unknown; // Version ?
+  UINT UnpackedSize;
+  UINT Size;
+  BYTE Data[Size];
+} FILE <name=getName>;
+
+string getName(FILE &File)
+{
+  return File.Name;
+}
+
+while (!FEof())
+{
+  FILE File;
+};

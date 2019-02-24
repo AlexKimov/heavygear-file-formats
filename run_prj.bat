@@ -1,0 +1,1 @@
+F:\git\qbms\quickbms.exe -Y -F "*.prj" prj.bms C:\Games\Activision\HeavyGear unpacked

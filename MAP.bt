@@ -1,0 +1,42 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+UINT FileCount;
+UINT Count;
+
+struct {
+  UCHAR Name[4];
+  UINT Pos;
+} RECORD1[Count] <name="Extension list">;
+
+UINT Unknown;
+UINT Count;
+
+struct {
+  UCHAR Name[16];
+} RECORD2[2] <name="DLL list">;
+
+typedef struct {
+  uchar Name[12];   
+  UINT Pos;
+  UCHAR None[4];
+} RECORD <optimize=false>;
+
+struct {
+  RECORD FileRec[FileCount] <name=getName>;
+} FILES <name="FileName List">;
+
+string getName(RECORD &rec)
+{
+  return rec.Name;
+}
