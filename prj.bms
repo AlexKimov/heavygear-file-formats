@@ -1,20 +1,33 @@
-# Game: Heavy Gear (PC, 1997) (script 0.1)
+# Game: Heavy Gear 1/2 (PC, 1997/1999) (script 0.1)
 # Description:
 # script to unpack .prj game file ("zlib" compression)
 # Link:
 
 comtype unzip_dynamic
+set OFFSET long 0
+get FILESIZE asize
 
-for i = 0 < 19544
-    GoTo 8 0 SEEK_CUR
-    GetDString FN 4
-    string FN l FN
-    GoTo 2 0 SEEK_CUR
-    get UNPACKED_SIZE LONG
-    get SIZE LONG
-    math OFFSET + 22   
-    string NAME p "%i.%s" i FN      
-    Clog NAME OFFSET SIZE UNPACKED_SIZE   
-    math OFFSET + SIZE 
-    GoTo OFFSET    
-next i
+GetDString MAGIC 6
+if MAGIC == "C:\HG2" || MAGIC == "C:\PRJ"
+    GoTo 0        
+    for i = 0 //< 19544
+        GoTo 8 0 SEEK_CUR
+        GetDString FN 4
+        string FN l FN
+        GoTo 2 0 SEEK_CUR
+        get UNPACKED_SIZE LONG
+        get SIZE LONG
+        math OFFSET + 22   
+        string NAME p "%i.%s" i FN  
+        if UNPACKED_SIZE != SIZE  
+          Clog NAME OFFSET SIZE UNPACKED_SIZE 
+        else
+          log NAME OFFSET SIZE
+        endif     
+        math OFFSET + SIZE 
+        GoTo OFFSET 
+        if OFFSET >= FILESIZE
+            break
+        endif 
+    next i
+endif 
