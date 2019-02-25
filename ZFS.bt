@@ -1,0 +1,74 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+struct {
+  CHAR Magic[4];
+  UINT Version;
+  UINT Unknown <name="Offset?">;
+  UINT FileCount <name="Number of the file records">;
+  UINT Count <name="The total number of files in archive">;
+  UINT Unknown;
+  UINT Size <name="Header size?">;
+} HEADER <name="File header">;
+
+typedef struct {
+  CHAR Name[16];
+  UINT Pos;
+  UINT ID;
+  UINT Size;
+  UINT Unknown; // ??
+  UINT Unknown;
+} RECORD <name=getName>;
+
+local uint i, k, Remainder, FileCount;
+local float Count;
+
+typedef struct (uint i, char Name[], uint Size) {
+  local string Name = Name;
+  BYTE Data[Size];
+} FILE <name=getFileName>;
+
+Count = HEADER.Count/HEADER.FileCount;
+Remainder = HEADER.Count % HEADER.FileCount;
+FileCount = HEADER.FileCount;
+
+if (Remainder > 0) ++Count;
+
+for (k = 0; k < Count; ++k)
+{    
+  struct {
+    UINT NextHeaderOffset;
+    if (Remainder > 0 & (Count == (k + 1))) 
+      FileCount = Remainder;
+    struct {
+      RECORD FileRec[FileCount];
+    } SECTION_HEADER;
+    struct {
+      for (i = 0; i < FileCount; ++i)
+      { 
+        FSeek(SECTION_HEADER.FileRec[i].Pos);
+        FILE File(i, SECTION_HEADER.FileRec[i].Name, SECTION_HEADER.FileRec[i].Size);
+      };
+    } FILES;
+  } SECTION <optimize=false>;
+};
+
+string getName(RECORD &Rec)
+{
+  return Rec.Name;
+};
+
+string getFileName(FILE &File)
+{
+  return File.Name;
+};

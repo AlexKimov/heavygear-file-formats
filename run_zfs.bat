@@ -1,0 +1,1 @@
+F:\git\qbms\quickbms.exe -d -Y -F "*.zfs" zfs.bms "C:\Games\Activision\Heavy Gear 2" unpacked

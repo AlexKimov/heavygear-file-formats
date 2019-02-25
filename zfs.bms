@@ -1,0 +1,29 @@
+# Game: Heavy Gear 2 (PC, 1997/1999) (script 0.1)
+# Description:
+# script to unpack .zfs game archive
+# Link:
+
+GoTo 12
+get FILECOUNT long
+get COUNT long
+GoTo 28
+
+XMath SECTION_COUNT "COUNT/FILECOUNT + 1"
+XMath REMAINDER "COUNT % FILECOUNT" 
+
+for k = 0 < SECTION_COUNT
+    get HEADER_POS long
+    XMath NUMBER "k + 1" 
+    if SECTION_COUNT == NUMBER
+       math FILECOUNT = REMAINDER
+    endif
+    for i = 0 < FILECOUNT
+        GetDString FILENAME 16
+        get POS long
+        GoTo 4 0 SEEK_CUR
+        get SIZE long 
+        GoTo 8 0 SEEK_CUR    
+        log FILENAME POS SIZE
+    next i    
+    GoTo HEADER_POS     
+next k
