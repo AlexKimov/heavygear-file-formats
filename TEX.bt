@@ -27,4 +27,4 @@ typedef struct {
 } RGB;
 
 RGB Palette[HEADER.PaletteSize];
-BYTE Data[23*HEADER.Width*HEADER.Height/23];
+UBYTE Color_Index[23*HEADER.Width*HEADER.Height/23];
