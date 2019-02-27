@@ -15,11 +15,11 @@ Old Activision games file formats and tools.
 
 | № | Template | Script (unpack) |  Description   |
 | :-- | :------- | :------- | :-- |
-|  **1**  | [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ATS.bt) |  [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/AST.bt) |  010Editor template for **AST** texture format (Spycraft)  |
-|  **2**  | [MAP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MAP.bt) |   |  010Editor template for **MAP** file (Heavy Gear 1/2)  |
-|  **2**  | [PTJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PTJ.bt) |   |  010Editor template for **PTJ** file (Heavy Gear 1)  |
-|  **3**  | [TEX.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/TEX.bt) |   |  010Editor template for **TEX** files (Heavy Gear 1)  |
-|  **4**  | [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/ZFS.bt) |  010Editor template for **ZFS** files (Heavy Gear 2)  |
+|  **1**  | [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ATS.bt) |  [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/AST.bt) | texture format (Spycraft)  |
+|  **2**  | [MAP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MAP.bt) |   |  store archive (prj) filenames (Heavy Gear 1/2)  |
+|  **2**  | [PTJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PTJ.bt) |   |  game archive (Heavy Gear 1)  |
+|  **3**  | [TEX.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/TEX.bt) |   |  texture file (Heavy Gear 1)  |
+|  **4**  | [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/ZFS.bt) |  game archive (Heavy Gear 2 + others)  |
 
     * file compressed with zlib compression
 
