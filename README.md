@@ -15,7 +15,7 @@ Old Activision games file formats and tools.
 
 | № | Template | Script (unpack) |  Description   |
 | :-- | :------- | :------- | :-- |
-|  **1**  | [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ATS.bt) |  [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/AST.bt) |  010Editor template for **PRJ** game archive* (Heavy Gear 1/2)  |
+|  **1**  | [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ATS.bt) |  [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/AST.bt) |  010Editor template for **AST** texture format (Spycraft)  |
 |  **2**  | [MAP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MAP.bt) |   |  010Editor template for **MAP** file (Heavy Gear 1/2)  |
 |  **2**  | [PTJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PTJ.bt) |   |  010Editor template for **PTJ** file (Heavy Gear 1)  |
 |  **3**  | [TEX.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/TEX.bt) |   |  010Editor template for **TEX** files (Heavy Gear 1)  |
