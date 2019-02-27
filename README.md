@@ -15,11 +15,11 @@ Old Activision games file formats and tools.
 
 | № | Template | Script (unpack) |  Description   |
 | :-- | :------- | :------- | :-- |
-|  **1**  | [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ATS.bt) |  [AST.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/AST.bt) | texture format (Spycraft)  |
+|  **1**  | [ATS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ATS.bt) |   | texture format (Spycraft)  |
 |  **2**  | [MAP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MAP.bt) |   |  store archive (prj) filenames (Heavy Gear 1/2)  |
-|  **2**  | [PTJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PTJ.bt) |   |  game archive (Heavy Gear 1)  |
+|  **2**  | [PTJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PTJ.bt) | [ptj.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  game archive (Heavy Gear 1)  |
 |  **3**  | [TEX.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/TEX.bt) |   |  texture file (Heavy Gear 1)  |
-|  **4**  | [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/ZFS.bt) |  game archive (Heavy Gear 2 + others)  |
+|  **4**  | [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [zfs.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zfs.bms) |  game archive (Heavy Gear 2 + others)  |
 
     * file compressed with zlib compression
 
