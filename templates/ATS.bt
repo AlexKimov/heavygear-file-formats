@@ -1,0 +1,54 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+local float size;
+local uint w, h;
+
+
+struct { 
+  uchar Magic[4];
+  UINT16 Unknown;
+  UINT PaletteSize;
+} HEADER;
+
+struct {
+  UINT Color;
+} PALETTE[256];
+
+
+typedef struct {
+  local uint i;
+  UINT16 Count; 
+  for (i = 0; i < Count; i++) 
+    struct {
+      struct {
+        UINT16 Width;
+        w += Width;
+        UINT16 Height;
+        h += Height;
+        UINT16 Unknown;
+        UINT Unknown;
+      } HEADER;
+
+      size = 23*HEADER.Width*HEADER.Height/23;
+      BYTE Data[size];
+    } IMAGE;
+} IMAGES;
+
+UINT16 Count;
+local uint k;
+for (k = 0; k < Count; k++) 
+  IMAGES Images;
+
+Printf("%d ", w);
+Printf("%d ", h);
