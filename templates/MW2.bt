@@ -1,0 +1,31 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+local uint i;
+local float size;
+
+UINT Count;
+struct {
+  UINT Position;
+} POS[Count];
+
+for (i = 0; i < Count; ++i)
+{
+  if (i + 1 == Count)
+    size = FileSize() - POS[i].Position;
+  else
+    size = POS[i + 1].Position - POS[i].Position;
+  struct {
+    BYTE Data[size];
+  } FILE;
+};
