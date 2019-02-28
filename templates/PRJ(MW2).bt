@@ -1,0 +1,119 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+local uint i, k;
+
+typedef enum <char> {
+  DDIT,
+  FREE,
+  ARCH,
+  TABL,
+  POLY,
+  ANIM,
+  CPIT,
+  HUD,
+  MGEO,
+  MEK,
+  AIT,
+  PAL,
+  CEL,
+  XYC,
+  FONT,
+  SHP,
+  MENU,
+  DISP,
+  SNDS,
+  XMID,
+  MUS,
+  LUMA,
+  TEXT,
+  BWD,
+  NTXT,
+  MTAB,
+  GIF,
+  PCX,
+  MWK,
+  DATA,
+  SYMB,
+  INDX
+} ID;
+
+CHAR Magic[4];
+UINT Size;
+UINT16 Unknown;
+UINT16 Unknown;
+
+ID Identifier[4];
+UINT DataOffset;
+UINT Unknown;
+
+UINT16 Count;
+
+struct {
+  ID Identifier[4];
+  UINT Pos;
+  UINT Size;
+  UINT Pos2;
+  UINT Size2;
+  UINT16 Unknown;
+  UINT16 Unknown;
+} RECORD[Count];
+
+FSeek(DataOffset + 20);
+struct {
+  ID Identifier1[4];
+  UINT Size;
+  BYTE Data[Size];
+} DATA[2] <optimize=false>;
+
+for (i = 0; i < Count; ++i)
+{
+  FSeek(RECORD[i].Pos);
+  struct {
+    ID Identifier[4];
+    UINT Size;
+    UINT Unknown;
+    ID Identifier1[4]; 
+    UINT16 Unknown;
+    UINT16 Count;
+    UINT Unknown; 
+    UINT16 Unknown;
+    struct {
+      UINT Unknown;
+      UINT Position;  
+    } POS[Count];
+    BYTE Empty[Size - Count*8 - 18] <name="Padding?">; 
+
+    struct {
+      //for (k = 0; k < Count; ++i)
+      //{
+      //  FSeek(POS[k].Position);
+      //  struct {
+      //    ID Identifier[4];
+      //    UINT Size;   
+      //    BYTE Data[Size];
+      //  } FILE;
+      //};
+    } FILES;    
+  } SECTION;
+
+  if (RECORD[i].Pos2 > 0)
+  {
+    FSeek(RECORD[i].Pos2);
+    struct {
+      ID Identifier2[4]; 
+      UINT Size;
+      BYTE Data1[Size];
+    } SECTION;
+  };
+};
