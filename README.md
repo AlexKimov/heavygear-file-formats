@@ -8,6 +8,7 @@ Old Activision games file formats and tools.
 | 1 | Spycraft: The Great Game | PC | 1996  | .ast |
 | 2 | Heavy Gear 1 | PC | 1997 | .map, .tex  |
 | 3 | Heavy Gear 2 | PC | 1998  | .map, .zfs  |
+| 4 | MechWarrior 2 | PC | 1996  | .sfl  |
 
 ## Templates
 
@@ -19,7 +20,8 @@ Old Activision games file formats and tools.
 |  **2**  | [MAP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MAP.bt) |   |  store archive (prj) filenames (Heavy Gear 1/2)  |
 |  **2**  | [PTJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PTJ.bt) | [ptj.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  game archive (Heavy Gear 1)  |
 |  **3**  | [TEX.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/TEX.bt) |   |  texture file (Heavy Gear 1)  |
-|  **4**  | [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [zfs.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zfs.bms) |  game archive (Heavy Gear 2 + others)  |
+|  **4**  | [SFL.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [zfs.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zfs.bms) |  game archive (Heavy Gear 2 + others)  |
+|  **5**  | [SFL.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/SFL.bt) |   | Sound file (DPCM) |
 
     * file compressed with zlib compression
 
