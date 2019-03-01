@@ -8,7 +8,7 @@ Old Activision games file formats and tools.
 | 1 | Spycraft: The Great Game | PC | 1996  | .ast |
 | 2 | Heavy Gear 1 | PC | 1997 | .map, .tex  |
 | 3 | Heavy Gear 2 | PC | 1998  | .map, .zfs  |
-| 4 | MechWarrior 2 | PC | 1996  | .sfl  |
+| 4 | MechWarrior 2 | PC | 1996  | .sfl, .mw2, .prj  |
 
 ## Templates
 
