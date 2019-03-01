@@ -1,0 +1,64 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+local byte b;
+local float FrameSize;
+
+typedef enum <ubyte>
+{
+  HALF_FRAME = 64,
+  QUARTER_FRAME = 128,
+  ZEROES = 0,
+  NOP = 1,
+  DPCM1 = 2,
+  DPCM2 = 3,
+  DPCM4 = 4,
+  RAW_DATA = 5
+} PROCESS_FLAG;
+
+struct {
+  CHAR Magic[4];
+  UINT Size;
+  UINT BlockCount;
+  UINT16 BlockSize;
+} HEADER <name="File Header">;
+
+struct {
+  while (!FEof())
+  {
+    PROCESS_FLAG PF;
+    if (PF == 64)
+        FrameSize = HEADER.BlockSize / 2;
+    else 
+      if (PF == 128)
+        FrameSize = HEADER.BlockSize / 4;
+      else
+        FrameSize = HEADER.BlockSize;
+    struct {
+      switch (PF)
+      {
+        case 2:
+          BYTE Data[2 + FrameSize/8];
+        break;
+        case 3:
+          BYTE Data[4 + FrameSize/4];
+        break;
+         case 4:
+          BYTE Data[16 + FrameSize/2];
+        break;
+        case 5:
+          BYTE Data[FrameSize];
+      };
+    } FRAME;
+  };
+} DPCM;
