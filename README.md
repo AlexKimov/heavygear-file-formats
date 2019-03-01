@@ -20,8 +20,8 @@ Old Activision games file formats and tools.
 |  **2**  | [MAP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MAP.bt) |   |  store archive (prj) filenames (Heavy Gear 1/2)  |
 |  **2**  | [PTJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PTJ.bt) | [ptj.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  game archive (Heavy Gear 1)  |
 |  **3**  | [TEX.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/TEX.bt) |   |  texture file (Heavy Gear 1)  |
-|  **4**  | [SFL.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [zfs.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zfs.bms) |  game archive (Heavy Gear 2 + others)  |
-|  **5**  | [SFL.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/SFL.bt) |   | Sound file (DPCM) |
+|  **4**  | [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [zfs.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zfs.bms) |  game archive (Heavy Gear 2 + others)  |
+|  **5**  | [SFL.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/SFL.bt) |   | Sound file (MechWarrior 2) |
 
     * file compressed with zlib compression
 
