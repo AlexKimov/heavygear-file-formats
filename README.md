@@ -5,11 +5,16 @@ Old Activision games file formats and tools.
 
 | №     | Game | Platform | Year | File extensions |
 | :--- | :-- | :------ | :------ | :------ |
-| 1 | Battlezone | PC | 1998  | .zfs |
-| 2 | Heavy Gear 2 | PC | 1998  | .map, .zfs  |
-| 3 | Heavy Gear 1 | PC | 1997 | .map, .tex  |
-| 4 | Spycraft: The Great Game | PC | 1996  | .ast |
-| 5 | MechWarrior 2 / Titanium | PC | 1995/1998  | .sfl, .mw2, .prj  |
+| 1 | Call to Power 2 | PC | 2000  | .zfs |
+| 2 | Interstate '82 | PC | 1999  | .zfs |
+| 3 | Civilization: Call to Power | PC | 1999  | .zfs |
+| 4 | Battlezone | PC | 1998  | .zfs |
+| 5 | Heavy Gear 2 | PC | 1998  | .map, .zfs, .prj  |
+| 6 | Interstate '76 | PC | 1997 | .zfs |
+| 7 | Zork: Grand Inquisitor | PC | 1997 | .zfs |
+| 8 | Heavy Gear 1 | PC | 1997 | .map, .tex, .prj  |
+| 9 | Spycraft: The Great Game | PC | 1996  | .ast |
+| 10 | MechWarrior 2 / Titanium | PC | 1995/1998  | .sfl, .mw2, .prj  |
 
 ## Templates
 
