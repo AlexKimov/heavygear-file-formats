@@ -5,10 +5,11 @@ Old Activision games file formats and tools.
 
 | №     | Game | Platform | Year | File extensions |
 | :--- | :-- | :------ | :------ | :------ |
-| 1 | Spycraft: The Great Game | PC | 1996  | .ast |
-| 2 | Heavy Gear 1 | PC | 1997 | .map, .tex  |
-| 3 | Heavy Gear 2 | PC | 1998  | .map, .zfs  |
-| 4 | MechWarrior 2 | PC | 1996  | .sfl, .mw2, .prj  |
+| 1 | Battlezone | PC | 1998  | .zfs |
+| 2 | Heavy Gear 2 | PC | 1998  | .map, .zfs  |
+| 3 | Heavy Gear 1 | PC | 1997 | .map, .tex  |
+| 4 | Spycraft: The Great Game | PC | 1996  | .ast |
+| 5 | MechWarrior 2 / Titanium | PC | 1995/1998  | .sfl, .mw2, .prj  |
 
 ## Templates
 
