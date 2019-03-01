@@ -1,0 +1,77 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+UCHAR Magic[4];
+UINT ImageCount;
+
+struct {
+  UINT Pos;
+  UINT PaletteOffset;
+} TABLE[ImageCount];
+
+local uint i, ImageEndPos, Data, EndOfLineCount;
+local byte b;
+
+struct {
+  for (i = 0; i < ImageCount; ++i)
+  {
+    if (TABLE[i].PaletteOffset > 0)
+    {
+      FSeek(TABLE[i].PaletteOffset);
+      struct {
+        UINT Count;
+        struct {
+          UINT16 Index;
+          UINT16 Color; 
+        } COLORS [Count];
+      } PALETTE;
+    };
+    FSeek(TABLE[i].Pos);
+    struct {
+      struct {
+        UINT16 Width;
+        UINT16 Height;
+        UINT Unknown;
+        UINT Unknown;
+        UINT Unknown;
+        UINT Width; // ??
+        UINT Height; // ??
+      } HEADER;
+      if (TABLE[i].PaletteOffset > 0) 
+        ImageEndPos = TABLE[i].PaletteOffset;
+      else
+        if (i + 1 == ImageCount)
+          ImageEndPos = FileSize();
+        else 
+          ImageEndPos = TABLE[i + 1].Pos;
+      while (FTell() <= ImageEndPos - 1) 
+      {       
+        struct { 
+          UBYTE B;
+          if (B == 0) // end of image line
+            EndOfLineCount++;
+          if (B) 
+            if (B == 1)
+              UBYTE PixelCount <name="Transparent pixels">; // copy zero for "PixelCount" number of times 
+            else
+              if (!(B & 1)) // copy "PixelIndex" value for "B" number of times
+                UBYTE PixelIndex <name="RLE Compressed">;
+              else
+                UBYTE RawData[B/2] <name="Raw Data">; // copy all data, "B" store data size to copy           
+        } DATA;  
+      };    
+    } IMAGE;
+  };
+} IMAGES;
+
+Printf("%d", EndOfLineCount);  
