@@ -26,8 +26,8 @@ Old Activision games file formats and tools.
 |  **1**  | [ATS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ATS.bt) |  | Spycraft | Texture |
 |  **2**  | [MW2.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MW2.bt) |  | MechWarrior 2  | Archive  |
 |  **3**  | [MAP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MAP.bt) |  |  Heavy Gear 1/2 | .prj archive filenames  |
-|  **4**  | [PRJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PRJ(HG1).bt) | [prj(hg1).bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  | Heavy Gear 1 | Archive |
-|  **5**  | [PRJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PRJ(MW2).bt) | [prj(mw2).bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  | MechWarrior 2 | Archive |
+|  **4**  | [PRJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PRJ(HG1).bt) | [prj(hg1).bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  Heavy Gear 1 | Archive |
+|  **5**  | [PRJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PRJ(MW2).bt) | [prj(mw2).bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  MechWarrior 2 | Archive |
 |  **6**  | [TEX.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/TEX.bt) |   | Heavy Gear 1  | Texture  |
 |  **7**  | [SFL.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/SFL.bt) |   | MechWarrior 2 | Sound file |
 |  **8**  | [SHP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/SHP.bt) |   | MechWarrior 2 | Texture |
@@ -45,10 +45,11 @@ Old Activision games file formats and tools.
 
 #### QuickBMS 
 
-| № | .bat file | Script  | Description   |
-| :-- | :------- | :-------  | :-- |
-|  **1**  | [run_prj.bat](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/run_prj.bat) | [prj.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/prj.bms)  | Quickbms script to unpack .prj files |
-|  **1**  | [run_zfs.bat](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/run_zfs.bat) | [zfs.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zfs.bms)  | Quickbms script to unpack .zfs files |
+| № | .bat file | Script  | Game | Description   |
+| :-- | :------- | :-------  | :-- | :-- |
+|  **1**  | [run_prj.bat](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/run_prj.bat) | [prj.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/prj.bms)  |  | unpack .prj files |
+|  **2**  | [run_zfs.bat](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/run_zfs.bat) | [zfs.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zfs.bms)  | unpack .zfs files |
+|  **3**  | [run_zork_tga.bat](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/run_zork_tga.bat) | [zork_tga.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zork_tga.bms)  | Zork: Grand Inquisitor | unpack .tga files |
 
 #### Noesis
 
