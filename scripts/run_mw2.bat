@@ -1,0 +1,1 @@
+F:\git\qbms\quickbms.exe -d -Y -F "*.mw2" mw2.bms "C:\Games\Activision\Titanium\Mercenaries" unpacked

@@ -1,0 +1,53 @@
+# Game: Zork Grand Inquisitor (script 0.1)
+# Description:
+# script to decompress and flip .tga files
+# Link:
+
+IDString "TGZ"
+GoTo 4
+
+get DECOMPRESSED_SIZE long
+get WIDTH long
+get HEIGHT long
+
+get NAME filename
+
+PutVarChr MEMORY_FILE 18 0  
+log MEMORY_FILE 0 0 
+
+# tga header (RGBA1555)
+set MEMORY_FILE binary "\x0\x0\x2\x0\x0\x0\x0\x0\x0\x0\x0\x0\x40\x1\xf0\x0\x10\x1" 
+   
+PutVarChr MEMORY_FILE 12 WIDTH short  
+PutVarChr MEMORY_FILE 14 HEIGHT short 
+
+log NAME 0 18 MEMORY_FILE
+
+comtype lzss # lzss compression
+
+get FILESIZE asize
+XMath SIZE "FILESIZE - 16" 
+
+Clog MEMORY_FILE2 16 SIZE DECOMPRESSED_SIZE
+append
+
+#flip image horizontally and vertically
+XMath POS "DECOMPRESSED_SIZE - WIDTH*2"
+XMath MIDPOINT "DECOMPRESSED_SIZE/2"
+XMath PREV_ROW_POS "WIDTH*4"
+math END_OF_ROW = DECOMPRESSED_SIZE
+XMath ROW "WIDTH*2"
+for i = 0 < MIDPOINT 
+    GetVarChr TMP1 MEMORY_FILE2 i short 
+    GetVarChr TMP2 MEMORY_FILE2 POS short     
+    PutVarChr MEMORY_FILE2 POS TMP1 short 
+    PutVarChr MEMORY_FILE2 i TMP2 short
+    math POS + 2  
+    if POS == END_OF_ROW
+        math POS - PREV_ROW_POS
+        math END_OF_ROW - ROW     
+    endif        
+next i + 2
+Log NAME 0 DECOMPRESSED_SIZE MEMORY_FILE2
+
+append
