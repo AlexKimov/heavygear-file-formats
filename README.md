@@ -5,31 +5,34 @@ Old Activision games file formats and tools.
 
 | №     | Game | Platform | Year | File extensions |
 | :--- | :-- | :------ | :------ | :------ |
-| 1 | Call to Power 2 | PC | 2000  | .zfs |
-| 2 | Interstate '82 | PC | 1999  | .zfs |
-| 3 | Civilization: Call to Power | PC | 1999  | .zfs |
-| 4 | Battlezone | PC | 1998  | .zfs |
-| 5 | Heavy Gear 2 | PC | 1998  | .map, .zfs, .prj  |
-| 6 | Interstate '76 | PC | 1997 | .zfs |
-| 7 | Zork: Grand Inquisitor | PC | 1997 | .zfs |
-| 8 | Heavy Gear 1 | PC | 1997 | .map, .tex, .prj  |
-| 9 | Spycraft: The Great Game | PC | 1996  | .ast |
-| 10 | MechWarrior 2 / Titanium | PC | 1995/1998  | .sfl, .mw2, .prj  |
+| 1 | Star Trek Armada | PC | 2000  | .zfs |
+| 2 | Call to Power 2 | PC | 2000  | .zfs |
+| 3 | Interstate '82 | PC | 1999  | .zfs |
+| 4 | Civilization: Call to Power | PC | 1999  | .zfs |
+| 5 | Battlezone | PC | 1998  | .zfs |
+| 6 | Heavy Gear 2 | PC | 1998  | .map, .zfs, .prj  |
+| 7 | Interstate '76 | PC | 1997 | .zfs |
+| 8 | Zork: Grand Inquisitor | PC | 1997 | .zfs |
+| 9 | Heavy Gear 1 | PC | 1997 | .map, .tex, .prj  |
+| 10 | Spycraft: The Great Game | PC | 1996  | .ast |
+| 11 | MechWarrior 2 / Titanium | PC | 1995/1998  | .sfl, .mw2, .prj  |
 
 ## Templates
 
 #### 010 Editor
 
-| № | Template | Script (unpack) |  Description   |
-| :-- | :------- | :------- | :-- |
-|  **1**  | [ATS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ATS.bt) |   | texture format (Spycraft)  |
-|  **2**  | [MAP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MAP.bt) |   |  store archive (prj) filenames (Heavy Gear 1/2)  |
-|  **3**  | [PTJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PTJ.bt) | [ptj.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  game archive (Heavy Gear 1)  |
-|  **4**  | [TEX.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/TEX.bt) |   |  texture file (Heavy Gear 1)  |
-|  **5**  | [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [zfs.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zfs.bms) |  game archive (Heavy Gear 2 + others)  |
-|  **6**  | [SFL.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/SFL.bt) |   | Sound file (MechWarrior 2) |
+| № | Template | Script (unpack) | Game | Format description   |
+| :-- | :------- | :------- | :-- | :-- |
+|  **1**  | [ATS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ATS.bt) |  | Spycraft | Texture |
+|  **2**  | [MW2.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MW2.bt) |  | MechWarrior 2  | Archive  |
+|  **3**  | [MAP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/MAP.bt) |  |  Heavy Gear 1/2 | .prj archive filenames  |
+|  **4**  | [PRJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PRJ(HG1).bt) | [prj(hg1).bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  | Heavy Gear 1 | Archive |
+|  **5**  | [PRJ.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/PRJ(MW2).bt) | [prj(mw2).bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/prj.bms)  |  | MechWarrior 2 | Archive |
+|  **6**  | [TEX.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/TEX.bt) |   | Heavy Gear 1  | Texture  |
+|  **7**  | [SFL.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/SFL.bt) |   | MechWarrior 2 | Sound file |
+|  **8**  | [SHP.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/SHP.bt) |   | MechWarrior 2 | Texture |
+|  **9**  | [ZFS.bt](https://github.com/AlexKimov/heavygear-file-formats/blob/master/templates/ZFS.bt) |  [zfs.bms](https://github.com/AlexKimov/heavygear-file-formats/blob/master/scripts/zfs.bms) |  | Almost all | Archive  |
 
-    * file compressed with zlib compression
 
 #### Kaitai Struct
 
